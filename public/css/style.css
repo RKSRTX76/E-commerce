@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.nav-bar {
+    position: sticky;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+}
+
+.logo {
+    height: 30px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    /* margin-left: 30px; Add some space on the left */
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-and-search {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.search-bar {
+    height: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-box {
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 90%;
+}
+
+.search {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.search-icon {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+
+.nav-options a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.icons-ham {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
