@@ -15,13 +15,13 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);   //boilerpalte use
 app.use(express.static(path.join(__dirname,"/public")))   //static files use (Ex- style.css)
 
-app.get("/",(req,res)=>{
-    res.send("Root page");
-});
+// app.get("/",(req,res)=>{
+//     res.send("Root page");
+// });
 
 
 //index route
-app.get("/home",async (req,res)=>{
+app.get("/",async (req,res)=>{
     res.render("listings/index.ejs");
 });
 
