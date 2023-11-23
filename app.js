@@ -26,6 +26,11 @@ app.get("/",async (req,res)=>{
 });
 
 
+app.get("/seller",async (req,res)=>{
+    res.render("listings/seller.ejs");
+});
+
+
 app.listen(port,()=>{
     console.log(`Server is listening to port ${port}`);
 });

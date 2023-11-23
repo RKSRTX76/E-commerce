@@ -180,7 +180,6 @@ body {
 .cards{
     display: flex;
     flex-wrap: wrap;
-    font-family: ;
     justify-content: space-between;
     width: 100%;
     height: auto ;   
@@ -212,7 +211,7 @@ ul{
     list-style: none;
 }
 .footer{
-    margin-top: 50%;
+    margin-top: 2%;
     background-color:black;
     padding: 100px,0;
     height: 350px;
@@ -289,4 +288,292 @@ margin-bottom: 10px;
     .footer-col {
     width: 1000%; 
     }  
+}
+
+
+
+/* seller page style sheet */
+
+body {
+    margin: 0px;
+    background-color: rgb(242, 242, 242);
+}
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.button-set {
+    display: flex;
+    margin-right: 2%;
+    position: relative;
+}
+
+.logo {
+    margin-left: 2%;
+    border-radius: 50%;
+    height: 50%;
+}
+
+.login {
+    height: 100%;
+    width: 120px;
+    margin-left: 10px;
+    background: none;
+    border: none;
+}
+
+.login:hover {
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.first-section {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.become-seller {
+    height: 400px;
+    width: 98%;
+    background-color: rgb(134, 132, 132);
+    background-image: url("../image/shop-banner.jpg");
+}
+
+.become-seller {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seller-text {
+    right: 14%;
+    position: absolute;
+    font-size: 27px;
+    font-family: monospace;
+    color: white;
+    line-height: 195%;
+}
+
+.button-selling {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.button-selling-maindiv {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 15px;
+    position: relative;
+}
+
+.button-selling:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(240, 232, 232);
+    color: black;
+    outline-width: 24px;
+    outline-color: black;
+}
+
+.button-selling-maindiv:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(240, 232, 232);
+    color: black;
+    outline-width: 24px;
+    outline-color: black;
+}
+
+.heading-why-sell {
+    margin-left: 5%;
+    font-size: 23px;
+    margin-bottom:3%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.why {
+    height: 360px;
+    width: 90%;
+    margin-top: 1%;
+    font-size: 30px;
+}
+
+.facilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.facilities-child {
+    height: 250px;
+    width: 450px;
+    background-color: white;
+    border: 0px solid black;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 9px;
+    box-shadow: -3px -2px 2px 7px #255a38;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.facility-images {
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+.c-image {
+    height: 200px;
+    aspect-ratio: 1/1;
+    border: 2px solid rgb(255, 204, 0);
+    border-radius: 50%;
+}
+
+.get-customers {
+    width: 85%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.customer-para {
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 1%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.customer-declaration {
+    margin-left: 10%;
+}
+
+.company-name {
+    font-size: 30px;
+}
+
+.first-for-main {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 25%;
+    border-bottom: 2px solid black;
+    background-color: rgb(125, 157, 137);
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div {
+    height: 470px;
+    width: 85%;
+    position: relative;
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.head-1st {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.image-control-main-div {
+    aspect-ratio: 1.5/1;
+    width: 100%;
+    border-top: 4px solid rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(255, 255, 255);
+}
+
+.div-main-para {
+    text-align: center;
+    width: 70%;
+    font-size: 15px;
+    display: table-cell;
+}
+
+.feedback {
+    width: 85%;
+    margin-bottom: 20px;
+    margin: 4%;
+}
+
+.input-feedback {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+}
+
+.textarea {
+    width: 40%;
+    outline: none;
+}
+
+.go-to-top {
+    background-color: rgb(83, 108, 83);
+    margin-bottom: 4%;
+    width: 98%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Send-to-top {
+    right: 25px;
+    position: absolute;
+    bottom: 25px;
+}
+
+.thanks {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#feedback {
+    margin: 18px;
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: transparent;
+    outline: 2px solid black;
+}
+.seller-body
+{
+    margin: 0px;
 }
