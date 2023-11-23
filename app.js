@@ -25,7 +25,7 @@ app.get("/",async (req,res)=>{
     res.render("listings/index.ejs");
 });
 
-
+/*seller route*/
 app.get("/seller",async (req,res)=>{
     res.render("listings/seller.ejs");
 });
