@@ -23,9 +23,18 @@ app.get("/",async (req,res)=>{
     res.render("listings/index.ejs");
 });
 
-/*seller route*/
+// seller route
 app.get("/seller",async (req,res)=>{
     res.render("listings/seller.ejs");
+});
+
+// Login
+app.get("/login",(req,res)=>{
+    res.render("listings/login.ejs");
+});
+// Register
+app.get("/register",(req,res)=>{
+    res.render("listings/signup.ejs");
 });
 
 
