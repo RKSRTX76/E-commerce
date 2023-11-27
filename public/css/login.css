@@ -88,8 +88,8 @@
     text-align: center;
     color: black;
     font-size: 15px;
-    margin-top: -45px;
-    margin-bottom: 4%;
+    margin-top: -60px;
+    /* margin-bottom: 4%; */
 }
 .box a{
     color: #348cd8;
@@ -101,5 +101,5 @@
 }
 .p a{
     text-decoration: none;
-    color: 348cd8;
+    color: #348cd8;
 }
