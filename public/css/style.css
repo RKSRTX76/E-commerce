@@ -1,3 +1,5 @@
+/* home page csss */
+
 * {
     padding: 0;
     margin: 0;
@@ -200,6 +202,95 @@ body {
     height: 320px;
     text-align: center;
 }
+.grid-div
+        {
+            background-color: rgb(255, 125, 125);
+            height: 100%;
+            border-radius: 9px;
+            overflow: hidden;
+        }
+        .grid-div:hover{
+            transform: scale(1.02);
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+        }
+        .grid-view
+        {
+            background-color: rgba(255, 255, 255, 0);
+            display: grid;
+            grid-template-rows: 50px 100px 100px 100px 100px 50px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 18px;
+            column-gap: 18px;
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+        .item-1
+        {
+            grid-row: 1/4;
+            grid-column: 1/2;
+            background-image: url("../image/bag.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .item-2
+        {
+            grid-row: 4/7;
+            grid-column:1/2;
+            background-image: url("../image/cloth.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .item-3
+        {
+            grid-row: 1/5;
+            grid-column: 2/4;
+            background-image: url("../image/electric1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .item-4
+        {
+            grid-row: 1/4;
+            grid-column: 4/4;
+            background-image: url("../image/gifts.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .item-5
+        {
+            grid-row: 4/7;
+            grid-column: 4/4;
+            background-image: url("../image/book.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .item-6
+        {
+            background-color: rgb(112, 181, 124);
+            z-index: 1;
+            grid-row: span 2;
+            grid-column: span 2;
+            background-image: url("../image/grc.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .div-1
+        {
+            background-color: rgba(255, 0, 0, 0);
+            position: relative;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+
+
+
 
 
 /**footer designing**/
