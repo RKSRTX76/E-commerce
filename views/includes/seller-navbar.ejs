@@ -1,6 +1,6 @@
 <body>
     <div class="nav-bar"> 
-      <div class="logo-and-search">
+      <div class="logo-and-search seller-nav">
           <div class="logo">
               <a href="./index.html"><img src="./image/logo.png" class="logo-img"></a>
           </div>
@@ -13,10 +13,14 @@
       </div>
     
       <div class="nav-options">
-        
-        <a href="/seller-login"> <button class="banner-btn btn user-page">Go to User Page</button></a>
+        <%  if(!loggedIn) { %>
+            <a href="/"> <button class="banner-btn btn user-page">Go to User Page</button></a>
          <a href="/seller-login"> <button class="banner-btn btn">Login</button></a>
-      </div>
+        <% } else { %>
+            <a href="/"> <button class="banner-btn btn user-page">Go to User Page</button></a>
+            <a href="/seller-info"><i id= "seller-user-icon" class="fa-regular fa-user icons nav-item" ></i></a>
+        <% } %>
+        </div>
       
       
     </div>

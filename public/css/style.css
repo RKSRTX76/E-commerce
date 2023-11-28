@@ -747,3 +747,9 @@ margin-bottom: 10px;
 .user-page{
     width:150px;
 }
+.seller-nav{
+    width: 80%;
+}
+#seller-user-icon{
+    margin-left: 40px;
+}

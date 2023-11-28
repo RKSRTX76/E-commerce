@@ -17,6 +17,11 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);   //boilerpalte use
 app.use(express.static(path.join(__dirname,"/public")))   //static files use (Ex- style.css)
 
+app.use((req, res, next) => {
+    res.locals.loggedIn = false;
+    next();
+});
+
 
 mongoose.connect('mongodb://127.0.0.1:27017/ishop');
 
@@ -70,11 +75,12 @@ app.post("/login", async (req, res) => {
 // ***************************************
 // seller route
 app.get("/seller",async (req,res)=>{
+    
     res.render("listings/seller.ejs");
 });
 // Seller register route
 app.get("/seller-register",(req,res)=>{
-    res.render("listings/seller-signup.ejs",{ isAuthenticated: req.isAuthenticated() });
+    res.render("listings/seller-signup.ejs");
     // res.send("working");
 });
 app.post("/seller-register",async(req,res)=>{
@@ -95,7 +101,9 @@ app.post("/seller-login", async (req, res) => {
     }
     if (password === user.password) {
         // res.send('Success');
-        res.redirect("/seller");
+        // Mark as login true
+        res.locals.loggedIn = true;
+        res.render("listings/seller.ejs",{user});
     } else {
         res.send('Access denied');
     }
