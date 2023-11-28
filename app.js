@@ -6,7 +6,7 @@ const path=require("path");
 const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const Listing=require("./models/listing.js");
-
+const Seller=require("./models/sellerInfo.js");
 
 
 app.set("view engine","ejs");
@@ -85,8 +85,8 @@ app.get("/seller-register",(req,res)=>{
 });
 app.post("/seller-register",async(req,res)=>{
     const { first, last, email, mob, password } = req.body;
-    const listing = new Listing({ first, last, email, mob, password });
-    await listing.save();
+    const seller = new Seller({ first, last, email, mob, password });
+    await seller.save();
     res.redirect('/seller-login');
 });
 // Seller login route
@@ -95,7 +95,7 @@ app.get("/seller-login",(req,res)=>{
 });
 app.post("/seller-login", async (req, res) => {
     const { email, password } = req.body;
-    const user = await Listing.findOne({ email });
+    const user = await Seller.findOne({ email });
     if (!user) {
         return res.status(400).send('Cannot find user');
     }
