@@ -744,3 +744,13 @@ margin-bottom: 10px;
 }
 
 
+/* User page redirect */
+.user-page{
+    width:150px;
+}
+.seller-nav{
+    width: 80%;
+}
+#seller-user-icon{
+    margin-left: 40px;
+}

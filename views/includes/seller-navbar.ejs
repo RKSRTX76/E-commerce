@@ -1,0 +1,30 @@
+<body>
+    <div class="nav-bar"> 
+      <div class="logo-and-search seller-nav">
+          <div class="logo">
+              <a href="./index.html"><img src="./image/logo.png" class="logo-img"></a>
+          </div>
+          <div class="search-bar">
+              <div class="search-box">
+                  <input type="text" placeholder="Search for products,brands and more" class="search">
+                  <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+              </div>
+          </div>
+      </div>
+    
+      <div class="nav-options">
+        <%  if(!loggedIn) { %>
+            <a href="/"> <button class="banner-btn btn user-page">Go to User Page</button></a>
+         <a href="/seller-login"> <button class="banner-btn btn">Login</button></a>
+        <% } else { %>
+            <a href="/"> <button class="banner-btn btn user-page">Go to User Page</button></a>
+            <a href="/seller-info"><i id= "seller-user-icon" class="fa-regular fa-user icons nav-item" ></i></a>
+        <% } %>
+        </div>
+      
+      
+    </div>
+
+   
+  </body>
+  
