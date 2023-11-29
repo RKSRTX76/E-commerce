@@ -82,7 +82,19 @@ app.get("/home/:id",async(req,res)=>{
     }
     res.render("listings/user-details.ejs",{user});
 });
-
+//Edit route
+app.get("/home/:id/edit",async (req,res)=>{
+    let {id}=req.params;
+    const user=await Listing.findById(id);
+    res.render("listings/edit.ejs",{user});
+});
+//update route
+app.put("/home/:id",async(req,res)=>{
+    let {id}=req.params;
+    const listing=await Listing.findByIdAndUpdate(id,{...req.body.listing},{ new: true }); //pass updated values
+    res.redirect(`/home/${id}`);  //show route
+    console.log(listing);
+});
 
 
 // ***************************************
@@ -130,7 +142,23 @@ app.get("/seller/:id",async(req,res)=>{
     res.render("listings/seller-details.ejs",{user});
     console.log(user);
 });
-
+//Seller Edit route
+app.get("/seller/:id/edit-seller",async (req,res)=>{
+    let {id}=req.params;
+    const user=await Seller.findById(id);
+    if(!user){
+        return res.status(404).send("Seller not found");
+    }
+    res.render("listings/edit-seller.ejs",{user});
+    console.log(user);
+});
+//Seller update route
+app.put("/seller/:id",async(req,res)=>{
+    let {id}=req.params;
+    const seller=await Seller.findByIdAndUpdate(id,{...req.body.seller},{ new: true }); //pass updated values
+    res.redirect(`/seller/${id}`);  //show route
+    console.log(seller);
+});
 // ****************************
 
 

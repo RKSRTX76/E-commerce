@@ -1,8 +1,17 @@
 <% layout("/layouts/simplePage") %>
-<h1>User details</h1>
-<div>
+
+<div class="details">
+    <h1>User details</h1>
     <p>Name: <%= user.first  %> <%= user.last %> </p>
     <p>Email : <%= user.email %> </p>
     <p>Mobile: <%= user.mob %> </p>
+    <form method="GET" action="/home/<%=user._id %>/edit">
+        <button class="btn">Edit</button>
+    </form>
+    <form method="GET" action="/home">
+        <button class="btn">Home</button>
+    </form>
 </div>
+
+
 

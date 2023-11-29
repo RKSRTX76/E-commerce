@@ -1,0 +1,27 @@
+<% layout("/layouts/simplePage") %>
+<h1>Edit Seller details</h1>
+    <form method="POST" action="/seller/<%= user._id %>?_method=PUT">
+        <div class="signup-box">
+            <label>First Name</label>
+            <input name="seller[first]" type="text" value="<%= user.first %>" placeholder="" class="input">
+            <label>Last Name</label>
+            <input name="seller[last]" type="text" value="<%= user.last %>" placeholder="" class="input">
+            <label>Email</label>
+            <input name="seller[email]" type="email" value="<%= user.email %>" placeholder="" class="input">
+            <label for="mob">Mobile No.</label>
+            <input name="seller[mob]" type="tel" value="<%= user.mob %>" placeholder="" class="input" pattern="[0-9]{10}">
+            <label for="product">Choose Product type</label>
+            <select name="seller[product]" class="product">
+                <option value=" " disabled selected>Select Type</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Home appliances">Home appliances</option>
+                <option value="Medicines">Medicines</option>
+                <option value="Other">Other</option>
+            </select>
+            <label>Password</label>
+            <input name="seller[password]" type="password" value="<%= user.password %>" placeholder="" class="input">
+        </div>
+        <button class="btn">Save</button>
+    </form>

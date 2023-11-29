@@ -9,23 +9,51 @@ body{
 }
 
 .box{
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     height: auto;
     margin: auto;
     border-radius: 15px;
     background-color: white;
-    margin-top: 8%;
+    margin-top: 8%; 
     display: flex;
+    flex-direction: column;
+    align-items: center; 
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.details{
+    width: 100%;
+    height: auto;
     
 }
 .box h1{
-    margin-top: 20%;
-    margin-bottom: 30%;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .box p{
     margin-bottom: 10px;
+    padding: 5px;
 }
 .box div{
-    margin-bottom: 10%;
+    margin-bottom: 20px;
+}
+.btn{
+    height: auto;
+    width: 120px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 10px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
