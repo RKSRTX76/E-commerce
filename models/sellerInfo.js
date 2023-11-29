@@ -13,10 +13,17 @@ const sellerSchema=new Schema({
     email:{
         type:String,
         required:true,
+        unique: true,
     },   
     mob:{
         type:Number,
-    },  
+        required:true,
+        unique: true,
+    },
+    product:{
+        type:String,
+        required:true,
+    },
     password:{
         type:String,
         required:true,

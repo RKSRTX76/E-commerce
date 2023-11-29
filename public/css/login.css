@@ -11,11 +11,14 @@
 .signup-box{
     font-family: 'Poppins',sans-serif;
     width: 420px;
-    height: 650px;
+    height: 740px;
     margin: auto;
     background-color: white;
     border-radius: 15px;
     margin-top: 4%;
+}
+#signup-box{
+    height:680px;
 }
 .login-box{
     width: 360px;
@@ -89,6 +92,7 @@
     color: black;
     font-size: 15px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .box a{
     color: #348cd8;
@@ -101,4 +105,15 @@
 .p a{
     text-decoration: none;
     color: #348cd8;
+}
+.product{
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 30px;
+    outline: none;
+    background-color: white;
+    margin-bottom: 20px;
 }

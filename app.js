@@ -84,8 +84,8 @@ app.get("/seller-register",(req,res)=>{
     // res.send("working");
 });
 app.post("/seller-register",async(req,res)=>{
-    const { first, last, email, mob, password } = req.body;
-    const seller = new Seller({ first, last, email, mob, password });
+    const { first, last, email, mob, product, password } = req.body;
+    const seller = new Seller({ first, last, email, mob, product, password });
     await seller.save();
     res.redirect('/seller-login');
 });
@@ -107,6 +107,14 @@ app.post("/seller-login", async (req, res) => {
     } else {
         res.send('Access denied');
     }
+});
+// Seller details
+app.get("/seller/:id",async(req,res)=>{
+    const user=await Seller.findById(req.params.id);
+    if(!user){
+        return res.status(404).send("Seller not found");
+    }
+    res.render("listings/seller-details.ejs",{user});
 });
 
 // ****************************
