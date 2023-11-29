@@ -1,5 +1,8 @@
+<% layout("/layouts/simplePage") %>
 <h1>Seller details</h1>
-<p>Seller name: <%= user.first  %> <% user.last %> </p>
-<p>Email : <%= user.email %> </p>
-<p>Mobile: <%= user.mob %> </p>
-<p>Product type: <%= user.product %></p>
+<div>
+    <p>Seller name: <%= user.first  %> <%= user.last %> </p>
+    <p>Email : <%= user.email %> </p>
+    <p>Mobile: <%= user.mob %> </p>
+    <p>Product type: <%= user.product %></p>
+</div>

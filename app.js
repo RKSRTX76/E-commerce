@@ -8,7 +8,6 @@ const ejsMate=require("ejs-mate");
 const Listing=require("./models/listing.js");
 const Seller=require("./models/sellerInfo.js");
 
-
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 
@@ -21,6 +20,7 @@ app.use((req, res, next) => {
     res.locals.loggedIn = false;
     next();
 });
+
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/ishop');
@@ -36,10 +36,13 @@ db.once('open', () => {
 
 // **************************************************************************
 //index route
-app.get("/",async (req,res)=>{
+app.get("/",(req,res)=>{
+    res.send("Root is working");
+});
+app.get("/home",async (req,res)=>{
     res.render("listings/index.ejs");
 });
-// Register
+// User register
 app.get("/register",(req,res)=>{
     res.render("listings/signup.ejs");
 });
@@ -64,10 +67,20 @@ app.post("/login", async (req, res) => {
     }
     if (password === user.password) {
         // res.send('Success');
-        res.redirect("/");
+        // req.session.user = user; // Set the session here
+        res.locals.loggedIn = true;
+        res.render("listings/index.ejs",{user});
     } else {
         res.send('Access denied');
     }
+});
+// User Details
+app.get("/home/:id",async(req,res)=>{
+    const user=await Listing.findById(req.params.id);
+    if(!user){
+        return res.status(404).send("User not found");
+    }
+    res.render("listings/user-details.ejs",{user});
 });
 
 
@@ -115,6 +128,7 @@ app.get("/seller/:id",async(req,res)=>{
         return res.status(404).send("Seller not found");
     }
     res.render("listings/seller-details.ejs",{user});
+    console.log(user);
 });
 
 // ****************************
