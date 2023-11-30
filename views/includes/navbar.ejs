@@ -29,13 +29,61 @@
               <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
           </div>
           <div class="nav-item">
-              <a href="#"><i class="fa-solid fa-bars icons-ham"></i></a>
+              <button onclick="DivClose();" class="button"><i class="fa-solid fa-bars icons-ham"></i></button>
           </div>
       </div>
       
       
     </div>
+    <div class="slide-bar" id="bar" onmouseleave="myFunction();">
+        <h2 class="head">Hello <br><b style="color:rgb(0, 0, 0);">User Name</b></h2>
 
+        <form action="" class="form-dec">
+
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="home" class="inp" id="1-inp" name="check">
+                <label for="1-inp"><a href="" class="manage-anchor" id="mng-anch">Home</a></label> <br>
+            </div>
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="seller" class="inp" id="2-inp" name="check">
+                <label for="2-inp"><a href="" class="manage-anchor" id="mng-anch">Seller</a></label> <br>
+
+            </div>
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="Electrnics" class="inp" id="3-inp" name="check">
+                <label for="3-inp"><a href="" class="manage-anchor" id="mng-anch">Electronics</a></label> <br>
+            </div>
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="Fashions" class="inp" id="4-inp" name="check">
+                <label for="4-inp"><a href="" class="manage-anchor" id="mng-anch">Fashion</a></label> <br>
+
+            </div>
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="Gifts" class="inp" id="5-inp" name="check">
+                <label for="5-inp"><a href="" class="manage-anchor" id="mng-anch">Gifts</a></label> <br>
+
+            </div>
+            <div class="manage-link" id="mng-link">
+                <input type="checkbox" value="Bags" class="inp" id="6-inp" name="check">
+                <label for="6-inp"><a href="" class="manage-anchor" id="mng-anch">Bags</a></label> <br>
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+      function DivClose()
+        {
+            var x=document.getElementById('bar');
+            x.classList.toggle("bar-hide");
+        }
+        function myFunction()
+        {
+            var x=document.getElementById('bar');
+            x.classList.toggle("bar-hide");
+            document.getElementById("body").style.overflow="scroll";
+        }
+    </script>
    
   </body>
   
